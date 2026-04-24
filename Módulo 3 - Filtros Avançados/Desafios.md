@@ -1,9 +1,43 @@
-##🚀 Desafios SQL - Módulo 3 
-📚 Trilha SQL | Instituto NTA
-Continuação dos desafios com foco em filtros avançados, operadores
-lógicos e consultas mais próximas de cenários reais.
+# 🚀 Desafios SQL - Módulo 3 - Filtros Avançados
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SQL-PostgreSQL-blue?style=for-the-badge&logo=postgresql"/>
+  <img src="https://img.shields.io/badge/Nível-Iniciante%20→%20Intermediário-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Foco-Análise%20de%20Dados-orange?style=for-the-badge"/>
+</p>
+
 ---
-📌 Aula 12
+
+## 📚 Sobre o Projeto  
+
+Este repositório contém a resolução dos desafios do **Módulo 3 da Trilha SQL - Instituto NTA**.  
+
+💡 Nesses desafios trabalhei com:
+
+- Filtros avançados  
+- Operadores lógicos  
+- Combinação de operadores e filtros
+- Tratamento de dados para análise  
+
+---
+
+## 🧠 Habilidades Desenvolvidas  
+
+✔️ Escrita de queries SQL  
+✔️ Pensamento analítico  
+✔️ Simulação de cenários reais  
+✔️ Boas práticas com aliases e organização  
+✔️ Leitura e interpretação de dados  
+
+---
+
+
+
+
+
+
+## 📌 Aula 12
 🔹 Desafio 1: Mostrar todos os pedidos que NÃO foram cancelados
 ``` sql
 SELECT * FROM pedidos LIMIT 3
@@ -21,7 +55,7 @@ FROM pagamentos
 WHERE NOT metodo = 'boleto'
 ```
 ---
-📌 Aula 13
+## 📌 Aula 13
 🔹 Desafio 1: Mostrar pedidos com status 'entregue' ou 'enviado'
 ``` sql
 SELECT * FROM pedidos LIMIT 3
@@ -36,7 +70,7 @@ SELECT pagamento_id, metodo AS "Formas de Pagamentos" FROM pagamentos
 WHERE metodo IN ('pix', 'cartao_credito')
 ```
 ---
-📌 Aula 14
+## 📌 Aula 14
 🔹 Desafio 1: Mostrar avaliações que NÃO tenham nota 1 ou 5
 ``` sql
 SELECT * FROM avaliacoes LIMIT 3
@@ -52,7 +86,7 @@ FROM avaliacoes
 WHERE nota NOT IN (1, 5))
 ```
 ---
-📌 Aula 15
+## 📌 Aula 15
 🔹 Desafio 1: Mostrar pedidos com valor total entre R$ 500 e R$ 1500
 ``` sql
 SELECT * FROM pedidos LIMIT 3
@@ -71,7 +105,7 @@ WHERE data_pagamento BETWEEN '2025-01-01' AND '2025-12-31'
 ORDER BY data_pagamento ASC
 ```
 ---
-📌 Aula 16
+## 📌 Aula 16
 🔹 Desafio 1: Mostrar categorias cuja descrição contenha a palavra 'casa'
 ``` sql
 SELECT * FROM categorias LIMIT 3
@@ -87,7 +121,7 @@ SELECT produto_id, comentario FROM avaliacoes
 WHERE comentario LIKE '%qualidade%'
 ```
 ---
-📌 Aula 17
+## 📌 Aula 17
 🔹 Desafio 1: Mostrar clientes cujo estado comece com a letra 'S'
 ``` sql
 SELECT * FROM clientes LIMIT 20
@@ -101,10 +135,10 @@ SELECT nome, email FROM clientes
 WHERE email LIKE '%.net'
 ```
 ---
-🧠 Desafios Finais
-🏁 Desafio Final 1: Análise de Pedidos por Status
-  -- Mostre todos os pedidos que estão "em_separacao", "enviado" ou "em_transito"
-  -- Ordene por data do pedido (mais recente primeiro) 
+## 🧠 Desafios Finais
+## 🏁 Desafio Final 1: Análise de Pedidos por Status
+ - Mostre todos os pedidos que estão "em_separacao", "enviado" ou "em_transito"
+ - Ordene por data do pedido (mais recente primeiro) 
 
 ``` sql
 SELECT * FROM pedidos LIMIT 3
@@ -115,9 +149,9 @@ WHERE status IN ('em_separacao', 'enviado', 'em_transito')
 ORDER BY "Data do Pedido" DESC;
 ```
 
-🏁 Desafio Final 2: Produtos Fora de Faixa
-  -- Encontre produtos com preço FORA do intervalo de R$ 200 a R$ 2000
-  -- Mostre nome, marca e preço, ordenados por preço
+## 🏁 Desafio Final 2: Produtos Fora de Faixa
+ - Encontre produtos com preço FORA do intervalo de R$ 200 a R$ 2000
+ - Mostre nome, marca e preço, ordenados por preço
 
 ``` sql
 SELECT nome, marca AS "Fabricante", preco AS "Valor (R$)"
@@ -125,10 +159,10 @@ FROM produtos
 WHERE preco NOT BETWEEN 200 AND 2000
 ORDER BY preco DESC;
 ```
-🏁 Desafio Final 3: Busca de Clientes
-  -- Encontre clientes cujo nome começa com "Maria" ou "Ana"
-  -- E que NÃO sejam de São Paulo (SP)
-  -- Mostre nome, cidade e estado
+## 🏁 Desafio Final 3: Busca de Clientes
+ - Encontre clientes cujo nome começa com "Maria" ou "Ana"
+ - E que NÃO sejam de São Paulo (SP)
+ - Mostre nome, cidade e estado
 
 ``` sql
 SELECT nome, cidade, estado FROM clientes
@@ -137,10 +171,10 @@ OR nome LIKE 'Ana%'
 AND estado NOT IN ('SP')
 ```
 
-🏁 Desafio Final 4: Avaliações Medianas
-  -- Encontre avaliações com nota entre 2 e 4 (nem muito boas, nem muito ruins)
-  -- Que tenham algum comentário (comentario NOT LIKE '')
-  -- Mostre nota e comentário
+## 🏁 Desafio Final 4: Avaliações Medianas
+ - Encontre avaliações com nota entre 2 e 4 (nem muito boas, nem muito ruins)
+ - Que tenham algum comentário (comentario NOT LIKE '')
+ - Mostre nota e comentário
 
 ``` sql
 SELECT nota, comentario FROM avaliacoes
@@ -148,12 +182,12 @@ WHERE nota BETWEEN 2 AND 4
 AND comentario NOT LIKE '_'
 ```
 
-🏁 Desafio Final 5: Pagamentos Específicos (Desafio Avançado)
-  -- Encontre pagamentos que:
-  -- - Sejam de cartão (crédito ou débito) - use LIKE 'cartao%'
-  -- - Com valor entre R$ 100 e R$ 1000
-  -- - Que NÃO tenham status "recusado"
-  -- Mostre método, valor e status, ordenados por valor (maior primeiro)
+## 🏁 Desafio Final 5: Pagamentos Específicos (Desafio Avançado)
+ - Encontre pagamentos que:
+   - Sejam de cartão (crédito ou débito) - use LIKE 'cartao%'
+   - Com valor entre R$ 100 e R$ 1000
+   - Que NÃO tenham status "recusado"
+ - Mostre método, valor e status, ordenados por valor (maior primeiro)
 
 ``` sql
 SELECT * FROM pagamentos LIMIT 3
@@ -166,14 +200,14 @@ AND status NOT IN ('recusado')
 ORDER BY "Valor (R$)" DESC;
 ```
 
-🏁 Desafio Final 6: Relatório Complexo (Boss Final!)
-  -- Crie uma consulta que mostre produtos onde:
-  -- - A marca seja "Samsung", "Apple", "Sony" ou "LG"
-  -- - O preço esteja entre R$ 500 e R$ 5000
-  -- - O nome contenha "Smart" ou "Pro" (use OR com dois LIKE)
-  -- - O estoque NÃO esteja entre 0 e 5 (evitar produtos quase esgotados)
-  -- Mostre nome, marca, preço e estoque
-  -- Ordene por marca (A-Z) e depois por preço (menor para maior)
+## 🏁 Desafio Final 6: Relatório Complexo (Boss Final!)
+ - Crie uma consulta que mostre produtos onde:
+   - A marca seja "Samsung", "Apple", "Sony" ou "LG"
+   - O preço esteja entre R$ 500 e R$ 5000
+   - O nome contenha "Smart" ou "Pro" (use OR com dois LIKE)
+   - O estoque NÃO esteja entre 0 e 5 (evitar produtos quase esgotados)
+ - Mostre nome, marca, preço e estoque
+ - Ordene por marca (A-Z) e depois por preço (menor para maior)
 
 ``` sql
 SELECT * FROM produtos p LIMIT 5
