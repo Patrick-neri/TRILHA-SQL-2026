@@ -2,7 +2,8 @@
 
 ## 🎯 Obejtivo
 
-Reforçar conhecimentos já adquiridos, aprender novos e chegar ao nível avançado em consultas SQL.
+Reforçar conhecimentos já adquiridos, aprender novos e chegar ao nível avançado em consultas SQL.  
+Nota: As atividades forma feitas sem supervisão. As dúvidas foram tiradas seguindo método de pesquisa e busca: interne, documentação e IA.
 
 
 ---
